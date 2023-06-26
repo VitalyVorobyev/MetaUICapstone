@@ -45,14 +45,10 @@ header {
 
 header ul {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   list-style: none;
   gap: 20px;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
 }
 
 nav a {
@@ -64,5 +60,11 @@ nav a {
 
 footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
 }
