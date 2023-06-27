@@ -37,6 +37,8 @@
   }
 }
 
+/* Header */
+
 header {
   display: flex;
   justify-content: center;
@@ -51,12 +53,24 @@ header ul {
   gap: 20px;
 }
 
-nav a {
+header a {
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
   color: #333;
 }
+
+/* Main */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px 600px 500px 500px;
+  row-gap: 10px;
+  width: 860px;
+  margin: 0 auto;
+}
+
+/* Footer */
 
 footer {
   display: flex;
@@ -67,4 +81,9 @@ footer {
 footer ul {
   list-style: none;
   padding: 0;
+}
+
+.footer-section {
+  /* width: minmax(300px, auto); */
+  min-width: 300px;
 }

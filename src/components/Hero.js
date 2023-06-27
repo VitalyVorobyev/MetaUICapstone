@@ -1,13 +1,13 @@
 const Hero = () => {
     return (
-        <section class="Hero">
-            <div class="Hero-card">
-                <h1 class="Hero-title">Little Lemon</h1>
-                <h2 class="Hero-subtitle">Chicago</h2>
-                <div class="Hero-text"></div>
+        <section class="hero">
+            <div class="hero-card">
+                <h1 class="hero-title">Little Lemon</h1>
+                <h2 class="hero-subtitle">Chicago</h2>
+                <div class="hero-text"></div>
             </div>
-            <div class="Hero-img-container">
-                <img class="Hero-img" src="" alt="A restaurant dish"/>
+            <div class="hero-img-container">
+                <img class="hero-img" src="" alt="A restaurant dish"/>
             </div>
         </section>
     )
