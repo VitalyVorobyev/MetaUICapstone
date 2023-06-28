@@ -43,6 +43,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80px;
 }
 
 header ul {
@@ -64,10 +65,70 @@ header a {
 main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 400px 600px 500px 500px;
+  grid-template-rows: 350px 500px 500px 500px;
   row-gap: 10px;
   width: 860px;
   margin: 0 auto;
+}
+
+/* Hero */
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #6E6F6E;
+  background-size: auto;
+}
+
+.hero-card {
+  width: 300px;
+  height: fit-content;
+}
+
+.hero-title {
+  font: 32pt "Markazi Text";
+  font-weight: medium;
+  color: #F4CE14;
+  margin-bottom: 0;
+}
+
+.hero-subtitle {
+  font: 20pt "Markazi Text";
+  font-weight: 500;
+  color: #EDEFEE;
+  margin-top: 0;
+}
+
+.hero-text {
+  font: 14pt Karia;
+  font-weight: 500;
+  color: #EDEFEE;
+  width: 220px;
+}
+
+.hero-button {
+  background-color: #F4CE14;
+  font: 12pt Karia;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin: 20px 0px;
+  border-radius: 16px;
+}
+
+.hero-img-container {
+  position: relative;
+  border-radius: 16px;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+  top: 50px;
+  left: -20px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer */
