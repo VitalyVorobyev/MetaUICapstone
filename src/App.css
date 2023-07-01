@@ -107,7 +107,7 @@ main {
   width: 220px;
 }
 
-.hero-button {
+.hero-button, .highlights-button {
   background-color: #F4CE14;
   font: 12pt Karia;
   font-weight: 500;
@@ -129,6 +129,84 @@ main {
 .hero-img {
   width: 100%;
   height: 100%;
+}
+
+/* Highlights */
+
+.highlights-section {
+  margin: 2rem 0rem;
+  height: fit-content;
+}
+
+.highlights-header {
+  font: 26pt "Markazi Text";
+  font-weight: 600;
+  color: #000;
+}
+
+.highlights-button {
+  position: relative;
+  left: 75%;
+  top: -80px;
+}
+
+.highlight-title {
+  font: 1.2rem 500 "Markazi Text";
+  margin: 0;
+}
+
+.highlight-card-array {
+  display: flex;
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+  gap: 40px;
+  margin: 10px;
+  padding: 0;
+  top: -80px;
+}
+
+.highlight-price {
+  position: relative;
+  font-weight: 600;
+  left: 80%;
+  top: -19px;
+  color: #EE9972;
+  width: fit-content;
+  margin: 0;
+}
+
+.highlight-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+}
+
+.highlight-img {
+  width: 100%;
+}
+
+.highlight-text {
+  font: 13pt "Karla";
+  color: #495E57;
+}
+
+.highlight-card {
+  background-color: #EDEFEE;
+  border-radius: 16px 16px 0 0;
+  width: 250px;
+}
+
+.highlight-button {
+  font: 12pt "Karla";
+  font-weight: 600;
+  color: #333;
+}
+
+.highlight-main {
+  padding: 15px;
 }
 
 /* Footer */
