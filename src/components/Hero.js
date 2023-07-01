@@ -2,7 +2,7 @@ import Photo from "../images/restauranfood.jpg"
 
 const Hero = () => {
     return (
-        <section class="hero">
+        <section class="hero" id='hero'>
             <div class="hero-card">
                 <h1 class="hero-title">Little Lemon</h1>
                 <h2 class="hero-subtitle">Chicago</h2>

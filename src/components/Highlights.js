@@ -6,9 +6,11 @@ import LemonDessertImg from "../images/lemon dessert.jpg"
 
 const Highlights = () => {
     return (
-        <section class="highlights-section">
-            <h1 class="highlights-header">This week's specials!</h1>
-            <button class="highlights-button">Online menu</button>
+        <section class="highlights-section" id='highlights'>
+            <header class="highlights-heading">
+                <h1 class="highlights-header">This week's specials!</h1>
+                <button class="highlights-button">Online menu</button>
+            </header>
             <div class="highlight-card-array">
                 <HighlightCard
                     img={GreekSaladImg}

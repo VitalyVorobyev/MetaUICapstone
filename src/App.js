@@ -1,17 +1,16 @@
 import './App.css';
+import { useRoutes } from "react-router-dom";
+import HomePage from './components/Homepage';
+import BookingPage from './components/BookingPage';
 
-import Header from './components/Header';
-import Homepage from './components/Homepage';
-import Footer from './components/Footer';
+// impo rt Main from './components/Main'
 
 function App() {
-  return (
-    <>
-      <Header/>
-      <Homepage/>
-      <Footer/>
-    </>
-  );
+  const elements = useRoutes([
+    { path: "/", element: <HomePage/> },
+    { path: "/booking", element: <BookingPage/>}
+  ]);
+  return elements;
 }
 
 export default App;

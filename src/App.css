@@ -65,7 +65,6 @@ header a {
 main {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 350px 500px 500px 500px;
   row-gap: 10px;
   width: 860px;
   margin: 0 auto;
@@ -74,6 +73,7 @@ main {
 /* Hero */
 
 .hero {
+  width: 860px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -104,7 +104,7 @@ main {
   font: 14pt Karia;
   font-weight: 500;
   color: #EDEFEE;
-  width: 220px;
+  width: 280px;
 }
 
 .hero-button, .highlights-button {
@@ -134,20 +134,23 @@ main {
 /* Highlights */
 
 .highlights-section {
+  width: 860px;
+  height: fit-content;
   margin: 2rem 0rem;
   height: fit-content;
+}
+
+.highlights-heading {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 1rem;
+  padding: 0;
 }
 
 .highlights-header {
   font: 26pt "Markazi Text";
   font-weight: 600;
   color: #000;
-}
-
-.highlights-button {
-  position: relative;
-  left: 75%;
-  top: -80px;
 }
 
 .highlight-title {
@@ -164,7 +167,6 @@ main {
   gap: 40px;
   margin: 10px;
   padding: 0;
-  top: -80px;
 }
 
 .highlight-price {
@@ -214,10 +216,9 @@ main {
 
 .testimonials {
   position: relative;
-  /* width: auto; */
-  width: 1024px;
-  margin: 2rem 0;
-  padding: 6rem 0;
+  width: 860px;
+  margin: 0;
+  padding: 2rem 0;
   height: fit-content;
   background-color: #D9D9D9;
 }
@@ -225,22 +226,22 @@ main {
 .testimonials-header {
   font: 24pt 'Markazi Text';
   position: relative;
-  margin: 4rem auto;
+  margin: 2rem auto;
   width: fit-content;
 }
 
 .testimonials-reviews {
   display: flex;
-  position: relative;
-  width: 100%;
-  justify-content: space-around;
   overflow-x: auto;
-  gap: 60px;
-  margin: 40px;
+  /* position: relative; */
+  width: 780px;
+  /* justify-content: left; */
+  gap: 40px;
+  padding: 40px;
 }
 
 .testimonial-card {
-  width: 200px;
+  width: 300px;
   height: 200px;
   padding: 15px;
   display: grid;
@@ -276,6 +277,53 @@ main {
 .testimonial-text {
   font: 12pt "Karla";
   grid-column: span 2;
+}
+
+/* About */
+
+.section-about {
+  padding: 2rem;
+  display: flex;
+  position: relative;
+  width: 860px;
+}
+
+.about-title {
+  font: 600 28pt "Markazi Text";
+  margin-bottom: 0;
+}
+
+.about-subtitle {
+  font: 500 22pt "Markazi Text";
+  color: #444;
+  margin-top: -0.5rem;
+}
+
+.about-text {
+  font: 400 14pt "Karia";
+  width: 350px;
+}
+
+.about-img-container1 {
+  position: relative;
+  left: 50px;
+  top: 120px;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.about-img-container2 {
+  position: relative;
+  top: 50px;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.about-image {
+  margin-left: -4rem;
+  height: 100%;
 }
 
 /* Footer */
