@@ -157,6 +157,7 @@ main {
 
 .highlight-card-array {
   display: flex;
+  justify-content: space-around;
   overflow-x: auto;
   position: relative;
   width: 100%;
@@ -168,7 +169,7 @@ main {
 
 .highlight-price {
   position: relative;
-  font-weight: 600;
+  font-weight: 800;
   left: 80%;
   top: -19px;
   color: #EE9972;
@@ -207,6 +208,74 @@ main {
 
 .highlight-main {
   padding: 15px;
+}
+
+/* Testimonials */
+
+.testimonials {
+  position: relative;
+  /* width: auto; */
+  width: 1024px;
+  margin: 2rem 0;
+  padding: 6rem 0;
+  height: fit-content;
+  background-color: #D9D9D9;
+}
+
+.testimonials-header {
+  font: 24pt 'Markazi Text';
+  position: relative;
+  margin: 4rem auto;
+  width: fit-content;
+}
+
+.testimonials-reviews {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-around;
+  overflow-x: auto;
+  gap: 60px;
+  margin: 40px;
+}
+
+.testimonial-card {
+  width: 200px;
+  height: 200px;
+  padding: 15px;
+  display: grid;
+  border-radius: 8px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr 4fr;
+  align-items: center;
+  background-color: #fff;
+}
+
+.testimonial-rating {
+  font: 600 16px "Karla";
+  grid-column: span 2;
+  text-align: center;
+}
+
+.testimonial-img-container {
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 10px;
+}
+
+.testimonial-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.testimonial-name {
+  font: 600 12pt "Karla";
+}
+
+.testimonial-text {
+  font: 12pt "Karla";
+  grid-column: span 2;
 }
 
 /* Footer */
