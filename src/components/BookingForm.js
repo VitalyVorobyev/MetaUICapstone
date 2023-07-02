@@ -5,12 +5,12 @@ const BookingForm = (props) => {
     const [date, setDate] = useState(null);
     const [time, setTime] = useState(null);
     const [numGuests, setNumGuests] = useState(1);
-    const [availableTimes, setAvailableTimes] = useState([
-        '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-    ]);
 
     const occasionChanged = (value) => { setOccasion(value); }
-    const dateChanged = (value) => { setDate(value); }
+    const dateChanged = (value) => {
+        setDate(value);
+        props.availableTimesDispatcher(date);
+    }
     const timeChanged = (value) => { setTime(value); }
     const numGuestsChanged = (value) => { setNumGuests(value); }
 
@@ -36,7 +36,7 @@ const BookingForm = (props) => {
             <div>
                 <label htmlFor="res-time">Choose time</label>
                 <select id="res-time" name="res-time" onChange={timeChanged}>
-                    { availableTimes.map((item) => <option>{item}</option>) }
+                    { props.availableTimes.map((item) => <option>{item}</option>) }
                 </select>
             </div>
             <div>
