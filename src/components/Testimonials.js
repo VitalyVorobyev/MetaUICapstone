@@ -7,9 +7,9 @@ import Person4Img from "../images/img6.png"
 
 const Testimonials = () => {
     return (
-        <section class="testimonials" id='testimonials'>
-            <h1 class="testimonials-header">Testimonials</h1>
-            <div class='testimonials-reviews'>
+        <section className="testimonials" id='testimonials'>
+            <h1 className="testimonials-header">Testimonials</h1>
+            <div className='testimonials-reviews'>
                 <TestimonialCard
                     rating='4.5'
                     img={Person1Img}

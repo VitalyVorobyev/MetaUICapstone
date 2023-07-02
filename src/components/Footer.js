@@ -4,13 +4,13 @@ import Nav from "./Nav";
 const Footer = () => {
     return (
         <footer>
-            <section class="footer-section">
+            <section className="footer-section">
                 <img src={Logo} alt="Logo"/>
             </section>
-            <section class="footer-section">
+            <section className="footer-section">
                 <Nav/>
             </section>
-            <section class="footer-section">
+            <section className="footer-section">
                 <h2>Contact</h2>
                 <ul>
                     <li>Address</li>
@@ -18,7 +18,7 @@ const Footer = () => {
                     <li>Email</li>
                 </ul>
             </section>
-            <section class="footer-section">
+            <section className="footer-section">
                 <h2>Social media links</h2>
                 <ul>
                     <li>Github</li>

@@ -1,13 +1,13 @@
 
 const TestimonialCard = (props) => {
     return (
-        <div class="testimonial-card">
-            <div class='testimonial-rating'>{props.rating}</div>
-            <div class='testimonial-img-container'>
-                <img class='testimonial-img' src={props.img} alt='person avatar'/>
+        <div className="testimonial-card">
+            <div className='testimonial-rating'>{props.rating}</div>
+            <div className='testimonial-img-container'>
+                <img className='testimonial-img' src={props.img} alt='person avatar'/>
             </div>
-            <div class='testimonial-name'>{props.name}</div>
-            <div class='testimonial-text'>{props.text}</div>
+            <div className='testimonial-name'>{props.name}</div>
+            <div className='testimonial-text'>{props.text}</div>
         </div>
     )
 };
