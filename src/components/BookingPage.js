@@ -3,11 +3,12 @@ import BookingForm from "./BookingForm";
 import Footer from "./Footer";
 
 import { useState, useEffect, useReducer } from "react";
+import { fetchAPI } from './bookapi'
 
-export const updateTimes = (times, date) => { return times; }
-export const initializeTimes = () => [
-    '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-];
+export const updateTimes = (times, date) => {
+    return fetchAPI(date);
+}
+export const initializeTimes = (date) => fetchAPI(date);
 
 const BookingPage = (props) => {
     const [newBooking, setNewBooking] = useState(null);
@@ -21,7 +22,6 @@ const BookingPage = (props) => {
 
     return (
         <>
-        <Header />
         <main>
             <BookingForm
                 submitBooking={setNewBooking}
@@ -29,7 +29,6 @@ const BookingPage = (props) => {
                 availableTimes={availableTimes}
             />
         </main>
-        <Footer />
         </>
     )
 }
