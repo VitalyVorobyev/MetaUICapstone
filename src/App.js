@@ -8,10 +8,10 @@ import LittleLemonRoutes from './components/LittleLemonRoutes';
 
 import { fetchAPI } from './components/BookAPI';
 
-const updateTimes = (times, date) => {
+export const updateTimes = (times, date) => {
   return fetchAPI(date);
 }
-const initializeTimes = (date) => fetchAPI(date);
+export const initializeTimes = (date) => fetchAPI(date);
 
 const App = () => {
   const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, null, initializeTimes);

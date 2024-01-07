@@ -33,7 +33,7 @@ const BookingForm = (props) => {
             <input type="date" id="res-date" name="res-date" onChange={dateChanged}/>
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time" name="res-time" onChange={timeChanged}>
-                { props.availableTimes.map((item, index) => <option key={index}>{item}</option>) }
+                { props.availableTimes?.map((item, index) => <option key={index}>{item}</option>) }
             </select>
             <label htmlFor="guests">Number of guests</label>
             <input type="number" placeholder='1' min="1" max="10"

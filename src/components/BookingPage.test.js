@@ -1,10 +1,8 @@
-import {updateTimes, initializeTimes} from "./BookingPage";
+import { initializeTimes, updateTimes } from "../App";
 
 test('Renders choose date', () => {
-    const initTimes = initializeTimes();
-    expect(initTimes).toEqual([
-        '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'
-    ]);
-    const updatedTimes = updateTimes(initTimes, "01.01.2023");
+    const initTimes = initializeTimes(null);
+    expect(initTimes).toEqual([]);
+    const updatedTimes = updateTimes(initTimes, null);
     expect(updatedTimes).toEqual(initTimes);
-})
+});

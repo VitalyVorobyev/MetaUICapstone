@@ -20,7 +20,7 @@ const Footer = () => {
                 </ul>
             </section>
             <section className="footer-section">
-                <h2 className="footer-header">Social media links</h2>
+                <h2 className="footer-header">Social media</h2>
                 <ul>
                     <li>Github</li>
                     <li>Facebook</li>

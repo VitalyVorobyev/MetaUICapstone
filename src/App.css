@@ -340,6 +340,15 @@ footer {
 footer ul {
   list-style: none;
   padding: 0;
+  color: #333;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12pt;
 }
 
 .footer-section {
@@ -348,7 +357,8 @@ footer ul {
 }
 
 .footer-header {
-  font: 16pt Karia;
+  text-transform: uppercase;
+  font-size: 14pt;
   font-weight: 600;
   color: #444;
   margin: 0;
@@ -361,18 +371,27 @@ footer ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  font: 14pt Karia;
+  font-size: 12pt;
   font-weight: 500;
   text-align: right;
+  align-items: center;
 }
 
 .llform-button {
   background-color: #F4CE14;
-  font: 14pt Karia;
-  font-weight: 500;
+  font-size: 12pt;
+  font-weight: 600;
   padding: 10px 30px;
   margin: 10px 0px;
   border-width: 2px;
   border-color: #aaa;
   border-radius: 16px;
+}
+
+.llform > input, .llform > select {
+  font-size: 12pt;
+  padding: 8px;
+  border-width: 2px;
+  border-color: #aaa;
+  border-radius: 4px;
 }
