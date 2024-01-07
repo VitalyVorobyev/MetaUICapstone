@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const BookingForm = (props) => {
     const [occasion, setOccasion] = useState("No");
     const [date, setDate] = useState(null);
-    const [time, setTime] = useState(null);
+    const [time, setTime] = useState(new Date());
     const [numGuests, setNumGuests] = useState(1);
 
     const occasionChanged = (e) => { setOccasion(e?.target.value); }
@@ -11,7 +11,7 @@ const BookingForm = (props) => {
         setDate(e?.target.value);
         props.availableTimesDispatcher(e?.target.value);
     }
-    const timeChanged = (e) => { setTime(e?.target.value); }
+    const timeChanged = (e) => { setTime(Date.parse(e?.target.value)); }
     const numGuestsChanged = (e) => { setNumGuests(e?.target.value); }
 
     const handleSumbit = (e) => {
@@ -32,7 +32,7 @@ const BookingForm = (props) => {
             <label htmlFor="res-date">Choose date</label>
             <input type="date" id="res-date" name="res-date" onChange={dateChanged}/>
             <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" name="res-time" onChange={timeChanged}>
+            <select id="res-time" name="res-time" onChange={timeChanged} value={time}>
                 { props.availableTimes?.map((item, index) => <option key={index}>{item}</option>) }
             </select>
             <label htmlFor="guests">Number of guests</label>
