@@ -1,20 +1,28 @@
 import './App.css';
-import { useRoutes } from "react-router-dom";
-import HomePage from './components/Homepage';
-import BookingPage from './components/BookingPage';
+
+import { useReducer } from 'react';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LittleLemonRoutes from './components/LittleLemonRoutes';
 
-function App() {
-  const elements = useRoutes([
-    { path: "/", element: <HomePage/> },
-    { path: "/booking", element: <BookingPage/>}
-  ]);
+import { fetchAPI } from './components/BookAPI';
+
+const updateTimes = (times, date) => {
+  return fetchAPI(date);
+}
+const initializeTimes = (date) => fetchAPI(date);
+
+const App = () => {
+  const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, null, initializeTimes);
+
   return (
     <>
     <Header/>
-    {elements}
+    <LittleLemonRoutes
+      availableTimesDispatcher={dispatchAvailableTimes}
+      availableTimes={availableTimes}
+    />
     <Footer/>
     </>
   )

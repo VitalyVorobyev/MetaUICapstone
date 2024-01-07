@@ -8,10 +8,11 @@ const Footer = () => {
                 <img src={Logo} alt="Logo"/>
             </section>
             <section className="footer-section">
+            <h2 className="footer-header">Navigation</h2>
                 <Nav/>
             </section>
             <section className="footer-section">
-                <h2>Contact</h2>
+                <h2 className="footer-header">Contact</h2>
                 <ul>
                     <li>Address</li>
                     <li>Phone number</li>
@@ -19,7 +20,7 @@ const Footer = () => {
                 </ul>
             </section>
             <section className="footer-section">
-                <h2>Social media links</h2>
+                <h2 className="footer-header">Social media links</h2>
                 <ul>
                     <li>Github</li>
                     <li>Facebook</li>

@@ -329,9 +329,12 @@ main {
 /* Footer */
 
 footer {
+  margin: 10px auto;
+  max-width: 800px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 50px;
 }
 
 footer ul {
@@ -340,6 +343,36 @@ footer ul {
 }
 
 .footer-section {
-  /* width: minmax(300px, auto); */
-  min-width: 300px;
+  width: minmax(200px, auto);
+  /* min-width: 200px; */
+}
+
+.footer-header {
+  font: 16pt Karia;
+  font-weight: 600;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+/*  Booking form */
+.llform {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font: 14pt Karia;
+  font-weight: 500;
+  text-align: right;
+}
+
+.llform-button {
+  background-color: #F4CE14;
+  font: 14pt Karia;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin: 10px 0px;
+  border-width: 2px;
+  border-color: #aaa;
+  border-radius: 16px;
 }
