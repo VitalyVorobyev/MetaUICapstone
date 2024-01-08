@@ -11,7 +11,7 @@ const BookingForm = (props) => {
         setDate(e?.target.value);
         props.availableTimesDispatcher(e?.target.value);
     }
-    const timeChanged = (e) => { setTime(Date.parse(e?.target.value)); }
+    const timeChanged = (e) => { setTime(e?.target.value); }
     const numGuestsChanged = (e) => { setNumGuests(e?.target.value); }
 
     const handleSumbit = (e) => {

@@ -10,7 +10,7 @@ const seededRandom = function (seed) {
 export const fetchAPI = function(date) {
     var result = [];
     if (!date) return result;
-    const random = seededRandom(date);
+    const random = seededRandom(Date.parse(date));
 
     for(let i = 17; i <= 23; i++) {
         if(random() < 0.5) result.push(i + ':00');
