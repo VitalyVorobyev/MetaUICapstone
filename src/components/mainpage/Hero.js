@@ -1,4 +1,4 @@
-import Photo from "../images/restauranfood.jpg"
+import Photo from "../../images/restauranfood.jpg"
 
 const Hero = () => {
     return (

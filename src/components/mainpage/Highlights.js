@@ -1,17 +1,17 @@
 import HighlightCard from "./HighlightCard";
 
-import GreekSaladImg from "../images/greek salad.jpg"
-import BruchettaImg from "../images/bruchetta.png"
-import LemonDessertImg from "../images/lemon dessert.jpg"
+import GreekSaladImg from "../../images/greek salad.jpg"
+import BruchettaImg from "../../images/bruchetta.png"
+import LemonDessertImg from "../../images/lemon dessert.jpg"
 
 const Highlights = () => {
     return (
-        <section class="highlights-section" id='highlights'>
-            <header class="highlights-heading">
-                <h1 class="highlights-header">This week's specials!</h1>
-                <button class="highlights-button">Online menu</button>
+        <section className="highlights-section" id='highlights'>
+            <header className="highlights-heading">
+                <h1 className="highlights-header">This week's specials!</h1>
+                <button className="highlights-button">Online menu</button>
             </header>
-            <div class="highlight-card-array">
+            <div className="highlight-card-array">
                 <HighlightCard
                     img={GreekSaladImg}
                     price='$12.99'

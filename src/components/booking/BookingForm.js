@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 
 const BookingForm = (props) => {
     const [occasion, setOccasion] = useState("No");
-    const [date, setDate] = useState(null);
-    const [time, setTime] = useState(new Date());
+    const [date, setDate] = useState((new Date()).toString());
+    const [time, setTime] = useState(null);
     const [numGuests, setNumGuests] = useState(1);
 
     const occasionChanged = (e) => { setOccasion(e?.target.value); }
     const dateChanged = (e) => {
         setDate(e?.target.value);
+        console.log('date', e?.target.value, typeof(e?.target.value));
         props.availableTimesDispatcher(e?.target.value);
     }
     const timeChanged = (e) => { setTime(e?.target.value); }
@@ -30,7 +31,12 @@ const BookingForm = (props) => {
     return (
         <form onSubmit={handleSumbit} className='llform'>
             <label htmlFor="res-date">Choose date</label>
-            <input type="date" id="res-date" name="res-date" onChange={dateChanged}/>
+            <input type="date"
+                   id="res-date"
+                   name="res-date"
+                   value={date}
+                   onChange={dateChanged}
+            />
             <label htmlFor="res-time">Choose time</label>
             <select id="res-time" name="res-time" onChange={timeChanged} value={time}>
                 { props.availableTimes?.map((item, index) => <option key={index}>{item}</option>) }

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "./Homepage";
-import BookingPage from "./BookingPage";
+import HomePage from "./mainpage/Homepage";
+import BookingPage from "./booking/BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
 
 const LittleLemonRoutes = (props) => {

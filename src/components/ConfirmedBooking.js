@@ -2,7 +2,7 @@
 
 const ConfirmedBooking = (props) => {
     return (
-        <>
+        <main>
         <h1 className="booking-detail-header">
             {props.success ? 'Booking confirmed' : 'Cant make reservation'}
         </h1>
@@ -11,7 +11,7 @@ const ConfirmedBooking = (props) => {
             <div>{props.data?.numGuests} guests</div>
             <div>{props.data?.occasion}</div>
         </section>
-        </>
+        </main>
     )
 };
 

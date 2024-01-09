@@ -1,9 +1,9 @@
 import TestimonialCard from "./TestimonialCard";
 
-import Person1Img from "../images/img3.png"
-import Person2Img from "../images/img4.png"
-import Person3Img from "../images/img7.png"
-import Person4Img from "../images/img6.png"
+import Person1Img from "../../images/img3.png"
+import Person2Img from "../../images/img4.png"
+import Person3Img from "../../images/img7.png"
+import Person4Img from "../../images/img6.png"
 
 const Testimonials = () => {
     return (

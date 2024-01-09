@@ -3,16 +3,14 @@ import './App.css';
 import { useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from "react";
-import { submitAPI } from './components/BookAPI';
+import { submitAPI, fetchAPI } from './components/booking/bookapi';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LittleLemonRoutes from './components/LittleLemonRoutes';
 
-import { fetchAPI } from './components/BookAPI';
-
 export const updateTimes = (times, date) => {
-  return fetchAPI(Date.parse(date));
+  return fetchAPI(date);
 }
 export const initializeTimes = () => fetchAPI(new Date());
 
