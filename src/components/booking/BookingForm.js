@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const BookingForm = (props) => {
     const [occasion, setOccasion] = useState("No");
-    const [date, setDate] = useState((new Date()).toString());
+    const [date, setDate] = useState(null);
     const [time, setTime] = useState(null);
     const [numGuests, setNumGuests] = useState(1);
+    const [validinput, setValidinput] = useState(false);
+
+    const mindate = new Date().toJSON().slice(0, 10);
 
     const occasionChanged = (e) => { setOccasion(e?.target.value); }
     const dateChanged = (e) => {
@@ -25,6 +28,10 @@ const BookingForm = (props) => {
         })
     }
 
+    useEffect(() => {
+        setValidinput(date !== null && time !== null);
+    }, [date, time]);
+
     const occasions = ["No", "Birthday", "Anniversery"].map(
         (item, index) => <option key={index}>{item}</option>);
 
@@ -36,9 +43,16 @@ const BookingForm = (props) => {
                    name="res-date"
                    value={date}
                    onChange={dateChanged}
+                   required="true"
+                   placeholder="Pick a date"
+                   min={mindate}
             />
             <label htmlFor="res-time">Choose time</label>
-            <select id="res-time" name="res-time" onChange={timeChanged} value={time}>
+            <select id="res-time" name="res-time"
+                    onChange={timeChanged}
+                    placeholder='select time'
+                    value={time}
+            >
                 { props.availableTimes?.map((item, index) => <option key={index}>{item}</option>) }
             </select>
             <label htmlFor="guests">Number of guests</label>
@@ -52,7 +66,12 @@ const BookingForm = (props) => {
                 {occasions}
             </select>
             <label />
-            <button className='llform-button' type="submit">Make reservation</button>
+            <button className='llform-button'
+                    type="submit"
+                    disabled={!validinput}
+            >
+                Make reservation
+            </button>
         </form>
     );
 }
