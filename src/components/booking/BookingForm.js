@@ -69,6 +69,7 @@ const BookingForm = (props) => {
             <button className='llform-button'
                     type="submit"
                     disabled={!validinput}
+                    aria-label="On Click"
             >
                 Make reservation
             </button>
