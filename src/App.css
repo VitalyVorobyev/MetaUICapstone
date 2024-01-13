@@ -61,6 +61,10 @@ header a {
   color: #333;
 }
 
+header a.active {
+  color: #F4CE14;
+}
+
 /* Main */
 main {
   display: grid;
@@ -114,6 +118,7 @@ main {
   padding: 10px 30px;
   margin: 20px 0px;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .hero-img-container {
@@ -206,6 +211,7 @@ main {
   font: 12pt "Karla";
   font-weight: 600;
   color: #333;
+  cursor: pointer;
 }
 
 .highlight-main {
@@ -218,24 +224,21 @@ main {
   position: relative;
   width: 860px;
   margin: 0;
-  padding: 2rem 0;
   height: fit-content;
-  background-color: #D9D9D9;
+  background-color: #e6e6e6;
 }
 
 .testimonials-header {
   font: 24pt 'Markazi Text';
   position: relative;
-  margin: 2rem auto;
+  margin: 1.5rem auto 0 auto;
   width: fit-content;
 }
 
 .testimonials-reviews {
   display: flex;
   overflow-x: auto;
-  /* position: relative; */
   width: 780px;
-  /* justify-content: left; */
   gap: 40px;
   padding: 40px;
 }
@@ -246,37 +249,56 @@ main {
   padding: 15px;
   display: grid;
   border-radius: 8px;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 2fr 4fr;
+  grid-template:
+    "f r" 80px 
+    "n n"
+    "t t" / 2fr 1fr;
   align-items: center;
   background-color: #fff;
 }
 
+.testimonial-card:hover {
+  box-shadow: 2px 2px #aaa;
+}
+
 .testimonial-rating {
+  grid-area: r;
   font: 600 16px "Karla";
-  grid-column: span 2;
-  text-align: center;
+  background-color: #F4CE14;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .testimonial-img-container {
+  grid-area: f;
+  height: 100%;
+  aspect-ratio: 1/1;
   overflow: hidden;
   border-radius: 50%;
-  margin: 10px;
+  margin: 2px;
 }
 
 .testimonial-img {
   position: relative;
   width: 100%;
-  aspect-ratio: 1/1;
 }
 
 .testimonial-name {
+  grid-area: n;
   font: 600 12pt "Karla";
+  margin: 6px 0;
 }
 
 .testimonial-text {
+  grid-area: t;
   font: 12pt "Karla";
-  grid-column: span 2;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* About */
@@ -329,7 +351,7 @@ main {
 /* Footer */
 
 footer {
-  margin: 10px auto;
+  margin: 20px auto;
   max-width: 800px;
   display: flex;
   flex-wrap: wrap;
@@ -365,6 +387,11 @@ footer a {
   padding: 0;
 }
 
+.footer-sotial-logo {
+  width: 35px;
+  cursor: pointer;
+}
+
 /*  Booking form */
 .llform {
   width: 500px;
@@ -394,4 +421,20 @@ footer a {
   border-width: 2px;
   border-color: #aaa;
   border-radius: 4px;
+}
+
+.booking-detail-header {
+  font: 26pt "Markazi Text";
+  font-weight: 600;
+  color: #000;
+}
+
+.booking-detail {
+  color: #333;
+  border: 2px solid;
+  border-color: #aaa;
+  border-radius: 8px;
+  width: fit-content;
+  padding: 12px;
+  font-size: 1.2rem;
 }

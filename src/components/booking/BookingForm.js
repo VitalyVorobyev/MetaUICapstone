@@ -29,6 +29,12 @@ const BookingForm = (props) => {
     }
 
     useEffect(() => {
+        if (props.availableTimes) {
+            setTime(props.availableTimes[0]);
+        }
+    }, [props.availableTimes]);
+
+    useEffect(() => {
         setValidinput(date !== null && time !== null);
     }, [date, time]);
 

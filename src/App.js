@@ -1,8 +1,7 @@
 import './App.css';
 
-import { useReducer } from 'react';
+import { useState, useEffect, useReducer } from "react";
 import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from "react";
 import { submitAPI, fetchAPI } from './components/booking/bookapi';
 
 import Header from './components/Header';
@@ -15,6 +14,7 @@ export const updateTimes = (times, date) => {
 export const initializeTimes = () => fetchAPI(new Date());
 
 const App = () => {
+    const [activenav, setActivenav] = useState(0);
     const [availableTimes, dispatchAvailableTimes] = useReducer(updateTimes, null, initializeTimes);
     const [newBooking, setNewBooking] = useState(null);
     const [bookingList, setBookingList] = useState([]);
@@ -37,13 +37,14 @@ const App = () => {
 
     return (
         <>
-        <Header/>
+        <Header active={activenav}/>
         <LittleLemonRoutes
           availableTimesDispatcher={dispatchAvailableTimes}
           availableTimes={availableTimes}
           submitBooking={setNewBooking}
           data={newBooking}
           success={bookingstatus}
+          setActivenav={setActivenav}
         />
         <Footer/>
         </>
