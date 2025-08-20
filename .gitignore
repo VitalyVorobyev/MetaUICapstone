@@ -25,3 +25,4 @@ yarn-error.log*
 Wireframe
 icons_assets
 *.zip
+dist
